@@ -1,0 +1,23 @@
+.menu-container {
+  display: none;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    display: block;
+  }
+
+  &__icon--open {
+    display: none;
+  }
+
+  &__icon--close {
+    display: none;
+  }
+}

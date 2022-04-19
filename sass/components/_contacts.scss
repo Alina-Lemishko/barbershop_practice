@@ -1,0 +1,123 @@
+.contacts-wrap {
+  @media screen and (max-width: 767px) {
+    background-image: url(../../image/contact-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../image/contact-mobile@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../../image/contact-tablet.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../image/contact-tablet@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1170px) {
+    background-image: url(../../image/contact-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 1;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../image/contact-desktop@2x.png);
+    }
+  }
+
+}
+
+.contacts-section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  &__title {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+
+    color: $white-title-color;
+  }
+
+  &__after-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 44px;
+    margin-bottom: 20px;
+
+    color: $white-title-color;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 60px;
+      height: 1px;
+      margin-right: 20px;
+
+      background: rgba(157, 164, 189, 0.4);
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: $light-text-color;
+  }
+}
+
+.address-list {
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: #9DA4BD;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: #9DA4BD;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+}

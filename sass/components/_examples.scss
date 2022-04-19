@@ -1,0 +1,31 @@
+.examples-section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  &__pre-title {
+    display: flex;
+    align-items: baseline;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.91;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+
+    color: $black-title-color;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 60px;
+      height: 1px;
+      margin-right: 20px;
+
+      background: $black-title-color;
+    }
+  }
+}
+
+.examples-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
