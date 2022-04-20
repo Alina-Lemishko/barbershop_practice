@@ -71,6 +71,16 @@
     color: $white-title-color;
     transition: border-color 250ms linear;
 
+    &:not(:last-child) {
+      @media screen and (min-width: 768px) {
+        margin-right: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 330px;
+    }
+
     .online-section__label:focus-within>& {
       border-bottom: 1px solid $white-title-color;
     }
@@ -94,9 +104,17 @@
   }
 }
 
+.online-input__wrap {
+  display: flex;
+}
+
 .form-button {
   display: flex;
   justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
 }
 
 .form-btn {

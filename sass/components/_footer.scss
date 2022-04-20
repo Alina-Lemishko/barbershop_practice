@@ -3,11 +3,24 @@
   padding-bottom: 44px;
 }
 
+.footer-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .footer-soc {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
   &::before {
     display: block;
@@ -29,6 +42,12 @@
     letter-spacing: 0.2em;
 
     color: $black-title-color;
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 

@@ -5,6 +5,10 @@
     padding-top: 84px;
     padding-bottom: 84px;
 
+    @media screen and (max-width: 1199px) {
+      width: 480px;
+    }
+
     &__pre-title {
       display: flex;
       align-items: center;
@@ -43,6 +47,13 @@
 }
 
 .masters-list {
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__item:not(:last-child) {
     margin-bottom: 64px;

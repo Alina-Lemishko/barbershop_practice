@@ -46,10 +46,23 @@
   }
 }
 
+.features-content {
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+}
 
 .features-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
+
+  &--left {
+    margin-right: 30px;
+  }
 
   &--right {
     padding-top: 30px;
@@ -63,6 +76,10 @@
   padding: 20px 32px;
 
   background: #F7F7F7;
+
+  @media screen and (min-width: 768px) {
+    width: 210px;
+  }
 
   &:not(:nth-child(2n)) {
     margin-bottom: 30px;

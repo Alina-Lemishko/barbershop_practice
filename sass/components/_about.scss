@@ -2,6 +2,17 @@
   padding-top: 84px;
   padding-bottom: 84px;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &__content {
+    @media screen and (min-width: 767px) {
+      width: 50%;
+      margin-left: 30px;
+    }
+  }
+
   &__pre-title {
     display: flex;
     align-items: center;
@@ -13,6 +24,7 @@
     padding-bottom: 20px;
 
     color: $black-title-color;
+
 
     &::before {
       display: block;
@@ -30,28 +42,17 @@
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.05em;
-    width: 330px;
     padding-bottom: 20px;
 
     color: $black-title-color;
-  }
 
-  &__after-title {
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.02em;
-    padding-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      width: 330px;
+    }
 
-    color: $dark-text-color;
-  }
-
-  &__text {
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.02em;
-    padding-bottom: 40px;
-
-    color: $dark-text-color;
+    @media screen and (min-width: 1200px) {
+      font-size: 42px;
+    }
   }
 
   &__button {
@@ -69,8 +70,64 @@
     color: $black-title-color;
     cursor: pointer;
   }
+
+  &__after-title {
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.02em;
+    padding-bottom: 20px;
+
+    color: $dark-text-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 1.67;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    padding-bottom: 40px;
+    color: $dark-text-color;
+  }
 }
 
 .about-section__pictures {
   display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.about-image {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.about-image__item {
+  // margin: 15px;
+  // width: 50%;
+  // width: calc((100% - 15px * 4) / 2);
+}
+
+.about-image__item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }

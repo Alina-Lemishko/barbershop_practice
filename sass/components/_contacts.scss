@@ -45,6 +45,16 @@
   padding-top: 84px;
   padding-bottom: 84px;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &__wrap:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+
   &__title {
     font-family: 'Raleway';
     font-weight: 700;
@@ -68,7 +78,7 @@
     margin-top: 44px;
     margin-bottom: 20px;
 
-    color: $white-title-color;
+    color: rgba(157, 164, 189, 0.4);
 
     &::before {
       display: block;
@@ -86,11 +96,16 @@
     line-height: 1.67;
     letter-spacing: 0.02em;
 
-    color: $light-text-color;
+    color: rgba(157, 164, 189, 0.4);
+    ;
   }
 }
 
 .address-list {
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
+
   &__item:not(:last-child) {
     margin-bottom: 20px;
   }
