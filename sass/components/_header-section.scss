@@ -1,0 +1,92 @@
+.navigation-section {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 300px;
+    margin-left: 40px;
+  }
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    @media screen and (min-width: 768px) {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 0.1em;
+
+      color: $white-title-color;
+      @include transitioned(color);
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contact {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white-title-color;
+    @include transitioned(color);
+
+    @media screen and (min-width: 768px) {
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.tel-wrap {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+}

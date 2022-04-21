@@ -1,52 +1,25 @@
 .contacts-wrap {
-  @media screen and (max-width: 767px) {
-    background-image: url(../../image/contact-mobile.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url(../../image/contact-mobile@2x.png);
-    }
-  }
+  @include padding(84px, 84px);
 
   @media screen and (min-width: 768px) {
-    background-image: url(../../image/contact-tablet.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url(../../image/contact-tablet@2x.png);
-    }
+    @include padding(100px, 100px);
   }
 
-  @media screen and (min-width: 1170px) {
-    background-image: url(../../image/contact-desktop.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    flex-grow: 1;
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url(../../image/contact-desktop@2x.png);
-    }
+  @media screen and (min-width: 1200px) {
+    @include padding(130px, 130px);
+    padding-left: 100px;
   }
-
 }
 
 .contacts-section {
-  padding-top: 84px;
-  padding-bottom: 84px;
-
   @media screen and (min-width: 768px) {
     display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
   }
 
   &__wrap:not(:last-child) {
@@ -56,20 +29,16 @@
   }
 
   &__title {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.05em;
     margin-bottom: 40px;
-
     color: $white-title-color;
+
+    @media screen and (min-width: 768px) {
+      @include flex(flex, flex-start);
+    }
   }
 
   &__after-title {
-    display: flex;
-    align-items: center;
+    @include flex(flex, center);
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -78,7 +47,11 @@
     margin-top: 44px;
     margin-bottom: 20px;
 
-    color: rgba(157, 164, 189, 0.4);
+    color: $white-title-color;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
 
     &::before {
       display: block;
@@ -96,9 +69,14 @@
     line-height: 1.67;
     letter-spacing: 0.02em;
 
-    color: rgba(157, 164, 189, 0.4);
-    ;
+    color: $light-text-color;
   }
+}
+
+.contact-section__wrap--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .address-list {
@@ -106,13 +84,16 @@
     width: 80%;
   }
 
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 70px;
+  }
+
   &__item:not(:last-child) {
     margin-bottom: 20px;
   }
 
   &__link {
-    display: flex;
-    align-items: center;
+    @include flex(flex, center);
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
@@ -122,8 +103,7 @@
   }
 
   &__contact {
-    display: flex;
-    align-items: center;
+    @include flex(flex, center);
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;

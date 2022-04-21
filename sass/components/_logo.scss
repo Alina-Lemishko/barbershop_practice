@@ -1,0 +1,13 @@
+.header-logo {
+  margin-left: 31px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &--black {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}

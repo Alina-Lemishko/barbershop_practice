@@ -1,39 +1,20 @@
 .features-section {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  @include padding(84px, 84px);
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
   &__pre-title {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     margin-bottom: 29px;
-
-    color: $black-title-color;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 1px;
-      margin-right: 20px;
-
-      background: $black-title-color;
-    }
+    padding-bottom: 0;
   }
 
   &__title {
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 42px;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
-    margin-bottom: 20px;
-
-    color: $black-title-color;
   }
 
   &__after-title {
@@ -43,21 +24,37 @@
     margin-bottom: 44px;
 
     color: $dark-text-color;
+
+    @media screen and (min-width: 1200px) {
+      width: 500px;
+    }
   }
 }
 
 .features-content {
-  @media screen and (min-width: 768px) {
-    width: 500px;
+  @media screen and (max-width: 1199px) {
+    max-width: 500px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    flex-grow: 1;
   }
 }
 
 .features-wrap {
-  display: flex;
-  justify-content: space-around;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    justify-content: space-around;
+  }
 
   @media screen and (min-width: 768px) {
     justify-content: flex-end;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    flex-grow: 1;
   }
 
   &--left {
@@ -98,7 +95,6 @@
   &__item--value {
     display: flex;
     justify-content: center;
-    // position: relative;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.36;
@@ -109,18 +105,13 @@
     color: #303030;
 
     &::after {
-      // position: absolute;
-      // right: 0;
-      // top: 0;
       content: '';
       width: 13px;
       height: 22px;
       margin-top: 8px;
       margin-left: 2px;
       background-image: url(../../image/+.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
+      @include backgroud(contain, no-repeat, center);
     }
   }
 }

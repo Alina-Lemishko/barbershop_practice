@@ -1,9 +1,13 @@
 @import './utils/variables';
+@import './utils/mixins';
 @import "./components/_container.scss";
 @import "./components/_common.scss";
-@import "./components/header";
+@import './components/pre-title';
+@import './components/title';
+@import './components/after-title';
 @import './components/logo';
 @import './components/header-menu';
+@import './components/header-section';
 @import './components/hero';
 @import './components/about';
 @import './components/_prices';

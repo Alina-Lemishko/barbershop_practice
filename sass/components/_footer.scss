@@ -1,21 +1,18 @@
 .footer-section {
-  padding-top: 44px;
-  padding-bottom: 44px;
+  @include padding(44px, 44px);
 }
 
 .footer-wrap {
   @media screen and (min-width: 768px) {
-    display: flex;
+    @include flex(flex, center);
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: space-between;
   }
 }
 
 .footer-soc {
-  display: flex;
+  @include flex(flex, center);
   justify-content: flex-end;
-  align-items: center;
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
@@ -42,7 +39,7 @@
     letter-spacing: 0.2em;
 
     color: $black-title-color;
-    transition: color 300ms linear;
+    @include transitioned(color);
 
     &:hover,
     &:focus {

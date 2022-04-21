@@ -1,28 +1,10 @@
 .examples-section {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  @include padding(84px, 84px);
 
   &__pre-title {
-    display: flex;
-    align-items: baseline;
-    font-weight: 600;
-    font-size: 11px;
+    @include flex(flex, baseline);
     line-height: 1.91;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     margin-bottom: 44px;
-
-    color: $black-title-color;
-
-    &::before {
-      display: block;
-      content: '';
-      width: 60px;
-      height: 1px;
-      margin-right: 20px;
-
-      background: $black-title-color;
-    }
   }
 }
 
@@ -32,17 +14,22 @@
     flex-wrap: wrap;
     margin: -15px;
   }
-}
 
-.examples-list__item {
-  @media screen and (min-width: 768px) {
-    margin: 15px;
-    width: calc((100% - 15px * 4) / 2);
-  }
+  &__item {
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: calc((100% - 15px * 4) / 2);
+    }
 
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin: 15px;
+      width: calc((100% - 15px * 8) / 4);
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
     }
   }
 }

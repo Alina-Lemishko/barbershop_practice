@@ -1,0 +1,26 @@
+@mixin padding($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin flex($display, $align) {
+  display: $display;
+  align-items: $align;
+}
+
+@mixin transitioned($property) {
+  transition: $property 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin font($size, $weight, $line, $letter) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+  letter-spacing: $letter;
+}
+
+@mixin backgroud($size, $repeat, $position) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}

@@ -1,0 +1,20 @@
+.pre-title {
+  @include flex(flex, center);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+
+  color: $black-title-color;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background-color: $black-title-color;
+  }
+}

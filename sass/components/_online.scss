@@ -1,10 +1,57 @@
-.online {
+.online-wrap {
+  margin: 0 auto;
+  max-width: 1280px;
   background: #191C26;
+  flex-grow: 1;
+
+  @media screen and (max-width: 767px) {
+    background-image: url(../../image/contact-mobile.png);
+    @include backgroud(contain, no-repeat, bottom);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../image/contact-mobile@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../../image/contact-tablet.png);
+    @include backgroud(contain, no-repeat, bottom);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../image/contact-tablet@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 1170px) {
+    background-image: url(../../image/contact-desktop.png);
+    @include backgroud(contain, no-repeat, right);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../image/contact-desktop@2x.png);
+    }
+  }
 }
 
+.online {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+
 .online-section {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  @include padding(84px, 84px);
+
+  @media screen and (min-width: 1200px) {
+    @include padding(130px, 130px);
+    width: 52%;
+  }
 
   &__form {
     position: relative;
@@ -20,6 +67,10 @@
     margin-bottom: 44px;
 
     color: $white-title-color;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &__label {
@@ -32,15 +83,13 @@
     text-transform: uppercase;
 
     color: rgba(157, 164, 189, 0.4);
-    transition: color 300ms linear;
-
+    @include transitioned(color);
 
     &:focus-within {
       color: $white-title-color;
     }
 
-    &:focus-within span,
-    &:not(:placeholder-shown) span {
+    &:focus-within span {
       transform: translateY(-20px);
     }
 
@@ -48,7 +97,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      transition: transform 500ms linear;
+      @include transitioned(transform);
     }
   }
 
@@ -69,7 +118,7 @@
     margin-bottom: 44px;
 
     color: $white-title-color;
-    transition: border-color 250ms linear;
+    @include transitioned(border-color);
 
     &:not(:last-child) {
       @media screen and (min-width: 768px) {
@@ -79,6 +128,10 @@
 
     @media screen and (min-width: 768px) {
       width: 330px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
     }
 
     .online-section__label:focus-within>& {
@@ -101,11 +154,19 @@
     line-height: 1.36;
     letter-spacing: 0.1em;
     color: $white-title-color;
+
+    @media screen and (min-width: 1200px) {
+      width: 570px;
+    }
   }
 }
 
 .online-input__wrap {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .form-button {
@@ -115,23 +176,4 @@
   @media screen and (min-width: 768px) {
     justify-content: flex-start;
   }
-}
-
-.form-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 40px;
-  border: 1px solid $accent-color;
-  border-radius: 25px;
-
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  background-color: transparent;
-  color: $white-title-color;
-  cursor: pointer;
 }

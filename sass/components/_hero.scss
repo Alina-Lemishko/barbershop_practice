@@ -1,95 +1,19 @@
 .hero-section {
   display: flex;
 
-  @media screen and (max-width: 767px) {
-    padding-top: 208px;
-    padding-bottom: 183px;
-    padding-left: 31px;
-    // margin: 0 auto;
-    max-width: 100%;
-    height: 580px;
-    background-image: linear-gradient(to right,
-        rgba(25, 28, 38, 0.2),
-        rgba(25, 28, 38, 0.2)),
-      url(../../image/mobile_hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
-    flex-grow: 1;
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: linear-gradient(to right,
-          rgba(25, 28, 38, 0.2),
-          rgba(25, 28, 38, 0.2)),
-        url(../../image/mobile_hero@2x.jpg);
-    }
-
-    @media screen and (min-width: 768px) {
-      min-width: 576px;
-      height: 680px;
-      background-image: linear-gradient(to right,
-          rgba(25, 28, 38, 0.2),
-          rgba(25, 28, 38, 0.2)),
-        url(../../image/tablet_hero.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-        background-image: linear-gradient(to right,
-            rgba(25, 28, 38, 0.2),
-            rgba(25, 28, 38, 0.2)),
-          url(../../image/tablet_hero@2x.jpg);
-      }
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1073px;
-    height: 680px;
-    background-image: linear-gradient(to right,
-        rgba(25, 28, 38, 0.2),
-        rgba(25, 28, 38, 0.2)),
-      url(../../image/desktop_hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: linear-gradient(to right,
-          rgba(25, 28, 38, 0.2),
-          rgba(25, 28, 38, 0.2)),
-        url(../../image/desktop_hero@2x.jpg);
-    }
-  }
-
   &__pre-title {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-
     color: rgba(157, 164, 189, 0.6);
 
     &::before {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 1px;
-      margin-right: 20px;
-
       background: rgba(157, 164, 189, 0.6);
+
+      @media screen and (min-width: 768px) {
+        width: 65px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 63px;
+      }
     }
   }
 
@@ -102,100 +26,150 @@
     margin-bottom: 20px;
 
     color: $white-title-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 72px;
+      line-height: 1.18;
+    }
   }
 
   &__after-title {
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.02em;
-    width: 306px;
-
+    padding-bottom: 0;
     color: $light-text-color;
+
+    @media screen and (max-width: 767px) {
+      max-width: 330px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 400px;
+      font-size: 18px;
+      line-height: 1.67;
+    }
   }
 }
 
-// .hero-content {
-// padding-top: 208px;
-// padding-bottom: 183px;
-// padding-left: 31px;
-// // margin: 0 auto;
-// max-width: 480px;
-// height: 580px;
-// background-image: linear-gradient(to right,
-//     rgba(25, 28, 38, 0.2),
-//     rgba(25, 28, 38, 0.2)),
-//   url(../../image/mobile_hero.jpg);
-// background-size: cover;
-// background-repeat: no-repeat;
-// background-position: center;
-// flex-grow: 1;
+.hero-content {
+  // max-width: 480px;
+  height: 580px;
 
-// @media (min-device-pixel-ratio: 2),
-// (min-resolution: 192dpi),
-// (min-resolution: 2dppx) {
-//   background-image: linear-gradient(to right,
-//       rgba(25, 28, 38, 0.2),
-//       rgba(25, 28, 38, 0.2)),
-//     url(../../image/mobile_hero@2x.jpg);
-// }
+  @media screen and (max-width: 767px) {
+    @include padding(208px, 183px);
+    padding-left: 31px;
+    max-width: 100%;
+    height: 580px;
+    background-image: linear-gradient(to right,
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)),
+      url(../../image/mobile_hero.jpg);
+    @include backgroud(cover, no-repeat, center);
+    margin: 0 auto;
+    flex-grow: 1;
 
-//   @media screen and (min-width: 768px) {
-//     // margin-left: 28px;
-//     margin-right: 0;
-//     max-width: 577px;
-//     height: 680px;
-//     background-image: linear-gradient(to right,
-//         rgba(25, 28, 38, 0.2),
-//         rgba(25, 28, 38, 0.2)),
-//       url(../../image/tablet_hero.jpg);
-//     background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right,
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)),
+        url(../../image/mobile_hero@2x.jpg);
+    }
+  }
 
-//     @media (min-device-pixel-ratio: 2),
-//     (min-resolution: 192dpi),
-//     (min-resolution: 2dppx) {
-//       background-image: linear-gradient(to right,
-//           rgba(25, 28, 38, 0.2),
-//           rgba(25, 28, 38, 0.2)),
-//         url(../../image/tablet_hero@2x.jpg);
-//     }
-//   }
-// }
+  @media screen and (min-width: 768px) {
+    padding-left: 70px;
+    padding-top: 280px;
+    padding-right: 157px;
+    max-width: 100%;
+    height: 680px;
+    background-image: linear-gradient(to right,
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)),
+      url(../../image/tablet_hero.jpg);
+    @include backgroud(cover, no-repeat, center);
 
-// .socials {
-//   display: none;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right,
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)),
+        url(../../image/tablet_hero@2x.jpg);
+    }
+  }
 
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     align-items: flex-end;
-//     width: 114px;
-//     padding-left: 24px;
-//     padding-bottom: 40px;
-//   }
-// }
+  @media screen and (min-width: 1200px) {
+    padding-left: 96px;
+    padding-top: 272px;
+    padding-right: 206px;
+    flex-grow: 1;
+    max-width: 100%;
+    background-image: linear-gradient(to right,
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)),
+      url(../../image/desktop_hero.jpg);
+    @include backgroud(cover, no-repeat, null);
 
-.social-list {
-  display: none;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right,
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)),
+        url(../../image/desktop_hero@2x.jpg);
+    }
+  }
 }
 
-// .social-list {
-//   display: flex;
-//   transform: rotate(-90deg) translate(-19px);
-//   transform-origin: top left;
-//   align-items: center;
-//   // padding-top: 35px;
-//   // padding-bottom: 36px;
+.socials {
+  display: none;
 
-//   &__item:not(:last-child) {
-//     margin-right: 40px;
-//   }
+  @media screen and (min-width: 768px) {
+    @include flex(flex, flex-end);
+    width: 114px;
+    padding-left: 24px;
+    padding-bottom: 40px;
+  }
 
-//   &::before {
-//     content: '';
-//     display: block;
-//     width: 60px;
-//     height: 1px;
-//     margin-right: 40px;
+  @media screen and (min-width: 1200px) {
+    width: 93px;
+  }
+}
 
-//     background: #303030;
-//   }
-// }
+.social-list {
+  @include flex(flex, center);
+  transform: rotate(-90deg) translate(-19px);
+  transform-origin: top left;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+    background: $black-title-color;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    color: $black-title-color;
+    transition: color 300ms linear;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
