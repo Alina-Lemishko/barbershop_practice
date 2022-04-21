@@ -1433,6 +1433,12 @@ body {
   transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.online-section__input:focus-within span,
+.online-section__input:not(:placeholder-shown) + span {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
 @media screen and (min-width: 768px) {
   .online-section__input:not(:last-child) {
     margin-right: 30px;
@@ -1470,6 +1476,12 @@ body {
   line-height: 1.36;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+}
+
+.online-section__message:focus-within span,
+.online-section__message:not(:placeholder-shown) + span {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 @media screen and (min-width: 1200px) {

@@ -93,6 +93,7 @@
       transform: translateY(-20px);
     }
 
+
     & span {
       position: absolute;
       top: 0;
@@ -119,6 +120,11 @@
 
     color: $white-title-color;
     @include transitioned(border-color);
+
+    &:focus-within span,
+    &:not(:placeholder-shown)+span {
+      transform: translateY(-20px);
+    }
 
     &:not(:last-child) {
       @media screen and (min-width: 768px) {
@@ -154,6 +160,11 @@
     line-height: 1.36;
     letter-spacing: 0.1em;
     color: $white-title-color;
+
+    &:focus-within span,
+    &:not(:placeholder-shown)+span {
+      transform: translateY(-20px);
+    }
 
     @media screen and (min-width: 1200px) {
       width: 570px;
