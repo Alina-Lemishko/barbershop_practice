@@ -800,8 +800,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .prices {
-    background-image: url(../../image/prices-mobile.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
-    background-image: url(../../image/prices-mobile.png), linear-gradient(to right, #111319, #111319);
+    background-image: url(../image/prices-mobile.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
+    background-image: url(../image/prices-mobile.png), linear-gradient(to right, #111319, #111319);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -810,15 +810,15 @@ body {
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .prices {
-    background-image: url(../../image/prices-mobile@2x.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
-    background-image: url(../../image/prices-mobile@2x.png), linear-gradient(to right, #111319, #111319);
+    background-image: url(../image/prices-mobile@2x.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
+    background-image: url(../image/prices-mobile@2x.png), linear-gradient(to right, #111319, #111319);
   }
 }
 
 @media screen and (min-width: 768px) {
   .prices {
-    background-image: url(../../image/prices-tablet.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
-    background-image: url(../../image/prices-tablet.png), linear-gradient(to right, #111319, #111319);
+    background-image: url(../image/prices-tablet.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
+    background-image: url(../image/prices-tablet.png), linear-gradient(to right, #111319, #111319);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -827,15 +827,15 @@ body {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .prices {
-    background-image: url(../../image/prices-tablet@2x.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
-    background-image: url(../../image/prices-tablet@2x.png), linear-gradient(to right, #111319, #111319);
+    background-image: url(../image/prices-tablet@2x.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
+    background-image: url(../image/prices-tablet@2x.png), linear-gradient(to right, #111319, #111319);
   }
 }
 
 @media screen and (min-width: 1170px) {
   .prices {
-    background-image: url(../../image/prices-desktop.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
-    background-image: url(../../image/prices-desktop.png), linear-gradient(to right, #111319, #111319);
+    background-image: url(../image/prices-desktop.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
+    background-image: url(../image/prices-desktop.png), linear-gradient(to right, #111319, #111319);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -847,8 +847,8 @@ body {
 
 @media screen and (min-width: 1170px) and (min-device-pixel-ratio: 2), screen and (min-width: 1170px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1170px) and (min-resolution: 192dpi), screen and (min-width: 1170px) and (min-resolution: 2dppx) {
   .prices {
-    background-image: url(../../image/prices-desktop@2x.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
-    background-image: url(../../image/prices-desktop@2x.png), linear-gradient(to right, #111319, #111319);
+    background-image: url(../image/prices-desktop@2x.png), -webkit-gradient(linear, left top, right top, from(#111319), to(#111319));
+    background-image: url(../image/prices-desktop@2x.png), linear-gradient(to right, #111319, #111319);
   }
 }
 

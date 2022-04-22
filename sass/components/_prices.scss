@@ -1,6 +1,6 @@
 .prices {
   @media screen and (max-width: 767px) {
-    background-image: url(../../image/prices-mobile.png), linear-gradient(to right,
+    background-image: url(../image/prices-mobile.png), linear-gradient(to right,
         #111319,
         #111319);
     @include backgroud(cover, no-repeat, center);
@@ -8,7 +8,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../image/prices-mobile@2x.png),
+      background-image: url(../image/prices-mobile@2x.png),
         linear-gradient(to right,
           #111319,
           #111319);
@@ -16,7 +16,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url(../../image/prices-tablet.png), linear-gradient(to right,
+    background-image: url(../image/prices-tablet.png), linear-gradient(to right,
         #111319,
         #111319);
     @include backgroud(cover, no-repeat, center);
@@ -24,7 +24,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../image/prices-tablet@2x.png),
+      background-image: url(../image/prices-tablet@2x.png),
         linear-gradient(to right,
           #111319,
           #111319);
@@ -32,7 +32,7 @@
   }
 
   @media screen and (min-width: 1170px) {
-    background-image: url(../../image/prices-desktop.png),
+    background-image: url(../image/prices-desktop.png),
       linear-gradient(to right,
         #111319,
         #111319);
@@ -42,7 +42,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../image/prices-desktop@2x.png),
+      background-image: url(../image/prices-desktop@2x.png),
         linear-gradient(to right,
           #111319,
           #111319);
