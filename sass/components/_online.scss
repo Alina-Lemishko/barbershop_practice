@@ -5,35 +5,35 @@
   flex-grow: 1;
 
   @media screen and (max-width: 767px) {
-    background-image: url(../../image/contact-mobile.png);
+    background-image: url(../image/contact-mobile.png);
     @include backgroud(contain, no-repeat, bottom);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../image/contact-mobile@2x.png);
+      background-image: url(../image/contact-mobile@2x.png);
     }
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url(../../image/contact-tablet.png);
+    background-image: url(../image/contact-tablet.png);
     @include backgroud(contain, no-repeat, bottom);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../image/contact-tablet@2x.png);
+      background-image: url(../image/contact-tablet@2x.png);
     }
   }
 
   @media screen and (min-width: 1170px) {
-    background-image: url(../../image/contact-desktop.png);
+    background-image: url(../image/contact-desktop.png);
     @include backgroud(contain, no-repeat, right);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../image/contact-desktop@2x.png);
+      background-image: url(../image/contact-desktop@2x.png);
     }
   }
 }

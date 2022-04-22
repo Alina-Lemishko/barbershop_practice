@@ -61,7 +61,7 @@
     background-image: linear-gradient(to right,
         rgba(25, 28, 38, 0.2),
         rgba(25, 28, 38, 0.2)),
-      url(../../image/mobile_hero.jpg);
+      url(../image/mobile_hero.jpg);
     @include backgroud(cover, no-repeat, center);
     margin: 0 auto;
     flex-grow: 1;
@@ -72,7 +72,7 @@
       background-image: linear-gradient(to right,
           rgba(25, 28, 38, 0.2),
           rgba(25, 28, 38, 0.2)),
-        url(../../image/mobile_hero@2x.jpg);
+        url(../image/mobile_hero@2x.jpg);
     }
   }
 
@@ -85,7 +85,7 @@
     background-image: linear-gradient(to right,
         rgba(25, 28, 38, 0.2),
         rgba(25, 28, 38, 0.2)),
-      url(../../image/tablet_hero.jpg);
+      url(../image/tablet_hero.jpg);
     @include backgroud(cover, no-repeat, center);
 
     @media (min-device-pixel-ratio: 2),
@@ -94,7 +94,7 @@
       background-image: linear-gradient(to right,
           rgba(25, 28, 38, 0.2),
           rgba(25, 28, 38, 0.2)),
-        url(../../image/tablet_hero@2x.jpg);
+        url(../image/tablet_hero@2x.jpg);
     }
   }
 
@@ -107,7 +107,7 @@
     background-image: linear-gradient(to right,
         rgba(25, 28, 38, 0.2),
         rgba(25, 28, 38, 0.2)),
-      url(../../image/desktop_hero.jpg);
+      url(../image/desktop_hero.jpg);
     @include backgroud(cover, no-repeat, null);
 
     @media (min-device-pixel-ratio: 2),
@@ -116,7 +116,7 @@
       background-image: linear-gradient(to right,
           rgba(25, 28, 38, 0.2),
           rgba(25, 28, 38, 0.2)),
-        url(../../image/desktop_hero@2x.jpg);
+        url(../image/desktop_hero@2x.jpg);
     }
   }
 }
